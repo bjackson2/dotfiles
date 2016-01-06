@@ -6,8 +6,15 @@ set history=500
 set laststatus=2
 set autowrite
 
+" Font
+set gfn=Monaco:h12
+
 " Leader key
 let mapleader = "\<Space>"
+
+" Quick vimrc editing
+nmap <leader>vr :sp $MYVIMRC<cr>
+nmap <leader>so :source $MYVIMRC<cr>
 
 " Spacing
 set shiftwidth=2
@@ -35,6 +42,8 @@ inoremap <S-Tab> <c-n>
 " Search
 set hlsearch
 set incsearch
+set smartcase
+set ignorecase
 
 " Numbers
 set number
@@ -69,15 +78,3 @@ nnoremap <C-l> <C-w>l
 
 " CtrlP key mapping
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_regexp = 1
-
-let g:ctrlp_abbrev = {
-\ 'gmode': 't',
-\ 'abbrevs': [
-\   {
-\     'pattern': '\(^@.\+\|\\\@<!:.\+\)\@<! ',
-\     'expanded': '_',
-\     'mode': 'pfrz',
-\   },
-\ ]
-\}
