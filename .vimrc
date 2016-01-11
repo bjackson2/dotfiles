@@ -5,6 +5,10 @@ set ruler
 set history=500
 set laststatus=2
 set autowrite
+set scrolloff=5
+
+" Navigation
+runtime macros/matchit.vim
 
 " Font
 set gfn=Monaco:h12
@@ -40,10 +44,17 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
 " Search
-set hlsearch
+set nohlsearch
 set incsearch
 set smartcase
 set ignorecase
+
+" Search for word under cursor
+nnoremap <leader>/ /<C-R><C-W><cr>
+
+" Buffers
+" Keep split open while closing a buffer
+nnoremap <leader>bd :bp\|bd #<cr>
 
 " Numbers
 set number
