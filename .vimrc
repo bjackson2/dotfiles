@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'tpope/vim-surround'
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,11 +27,17 @@ set gfn=Monaco:h12
 
 " Leader commands
 let mapleader = "\<Space>"
+let g:rspec_command = "bin/rspec {spec}"
+
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
 map <leader>bd :bp\|bd #<cr>
 map <leader>/ /<C-R><C-W><cr>
 map <leader>i mmgg=G`m
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " Spacing
 set shiftwidth=2
