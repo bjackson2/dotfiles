@@ -1,3 +1,14 @@
+" Plugins
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
+filetype plugin indent on
+
 " Basic Settings
 set encoding=utf-8
 set noswapfile
@@ -16,17 +27,20 @@ set gfn=Monaco:h12
 " Leader key
 let mapleader = "\<Space>"
 
-" Quick vimrc editing
-nmap <leader>vr :sp $MYVIMRC<cr>
-nmap <leader>so :source $MYVIMRC<cr>
+" Leader commands
+
+map <leader>vr :sp $MYVIMRC<cr>
+map <leader>so :source $MYVIMRC<cr>
+map <leader>bd :bp\|bd #<cr>
+map <leader>/ /<C-R><C-W><cr>
+map <leader>i mmgg=G`m
 
 " Spacing
 set shiftwidth=2
-set backspace=2
+set backspace=indent,eol,start
 set tabstop=2
 set expandtab
 set shiftround
-filetype plugin indent on
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -49,12 +63,9 @@ set incsearch
 set smartcase
 set ignorecase
 
-" Search for word under cursor
-nnoremap <leader>/ /<C-R><C-W><cr>
-
-" Buffers
-" Keep split open while closing a buffer
-nnoremap <leader>bd :bp\|bd #<cr>
+" Don't use caching with CtrlP
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
 
 " Numbers
 set number
