@@ -13,6 +13,7 @@
 	co = checkout
 	sla = log --oneline --decorate --graph --all
   frm = !git checkout master && git fetch origin -p && git rebase origin/master && git checkout -
+  aap = "!git add . && git commit --amend --no-edit && git push origin \"$(git rev-parse --abbrev-ref HEAD)\" --force"
 
 [grep]
     linenumber = true
