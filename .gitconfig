@@ -1,19 +1,21 @@
 [color]
 	ui = true
+
 [user]
 	name = Ben Jackson
 	email = bjackson2@gmail.com
+
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
 
 [alias]
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	co = checkout
-	sla = log --oneline --decorate --graph --all
+  p = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  co = checkout
+  sla = log --oneline --decorate --graph --all
   frm = !git checkout master && git fetch origin -p && git rebase origin/master && git checkout -
-  aap = "!git add . && git commit --amend --no-edit && git push origin \"$(git rev-parse --abbrev-ref HEAD)\" --force"
+  amp = "!git add . && git commit --amend --no-edit && git push origin \"$(git rev-parse --abbrev-ref HEAD)\" --force"
 
 [grep]
     linenumber = true
