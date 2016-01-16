@@ -24,11 +24,8 @@ runtime macros/matchit.vim
 " Font
 set gfn=Monaco:h12
 
-" Leader key
-let mapleader = "\<Space>"
-
 " Leader commands
-
+let mapleader = "\<Space>"
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
 map <leader>bd :bp\|bd #<cr>
@@ -41,10 +38,9 @@ set backspace=indent,eol,start
 set tabstop=2
 set expandtab
 set shiftround
+set list listchars=tab:»·,trail:·
 
 " Tab completion
-" will insert tab at beginning of line,
-" will use completion if not at beginning
 set wildmode=list:longest,list:full
 function! InsertTabWrapper()
   let col = col('.') - 1
@@ -78,25 +74,21 @@ au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline
 set cursorline
 
-" Trailing whitespace
-set list listchars=tab:»·,trail:·
-
-" Open new split panes to right and bottom, which feels more natural
+" Splits
 set splitbelow
 set splitright
+set winwidth=84
+set winheight=5
+set winminheight=5
+set winheight=999
 
-" Run pathogen
 execute pathogen#infect()
 
-" Key mapping
+" Mappings
 map <F10> :NERDTreeToggle<CR>
 map <F9> :NERDTreeFind<CR>
-
-" Window switching
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" CtrlP key mapping
 let g:ctrlp_map = '<c-p>'
