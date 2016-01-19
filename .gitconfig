@@ -19,3 +19,5 @@
 
 [grep]
     linenumber = true
+[core]
+	editor = /usr/bin/vim

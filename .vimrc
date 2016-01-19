@@ -1,3 +1,7 @@
+" Filetypes
+au BufNewFile,BufRead *.es6 set filetype=javascript
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
 " Plugins
 set nocompatible
 filetype off
@@ -66,9 +70,12 @@ set incsearch
 set smartcase
 set ignorecase
 
-" Don't use caching with CtrlP
-let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-let g:ctrlp_use_caching = 0
+" Use silver searcher
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
 
 " Numbers
 set number
@@ -84,10 +91,6 @@ set cursorline
 " Splits
 set splitbelow
 set splitright
-set winwidth=84
-set winheight=5
-set winminheight=5
-set winheight=999
 
 execute pathogen#infect()
 
@@ -99,3 +102,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 let g:ctrlp_map = '<c-p>'
+
+" Grep shortcut
+"command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Ag<SPACE>
+
+" Grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
