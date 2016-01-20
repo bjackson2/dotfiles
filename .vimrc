@@ -42,7 +42,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-map <Leader>gd ! open /Applications/GitHub\ Desktop.app<cr>
+map <Leader>gd :!open /Applications/GitHub\ Desktop.app<CR><CR>
 
 " Spacing
 set shiftwidth=2
@@ -105,9 +105,7 @@ nnoremap <C-l> <C-w>l
 let g:ctrlp_map = '<c-p>'
 
 " Grep shortcut
-if !executable("Ag")
-  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-endif
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
 
 " Grep word under cursor
