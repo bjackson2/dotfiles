@@ -36,6 +36,7 @@ let g:rspec_command = "bin/rspec {spec}"
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
 map <leader>bd :bp\|bd #<cr>
+map <leader>ba :bufdo bd<cr>
 map <leader>/ /<C-R><C-W><cr>
 map <leader>i mmgg=G`m
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -96,8 +97,8 @@ set splitright
 execute pathogen#infect()
 
 " Mappings
-map <F10> :NERDTreeToggle<CR>
-map <F9> :NERDTreeFind<CR>
+nnoremap j gj
+nnoremap k gk
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -106,7 +107,7 @@ let g:ctrlp_map = '<c-p>'
 
 " Grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Ag<SPACE>\"
 
 " Grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
