@@ -10,6 +10,7 @@ call vundle#begin()
 
 Plugin 'tpope/vim-surround'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'jpo/vim-railscasts-theme'
 
 call vundle#end()
 filetype plugin indent on
@@ -93,8 +94,6 @@ set cursorline
 " Splits
 set splitbelow
 set splitright
-
-execute pathogen#infect()
 
 " Mappings
 nnoremap j gj
