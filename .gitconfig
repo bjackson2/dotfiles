@@ -11,7 +11,7 @@
 	required = true
 
 [alias]
-  p = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  p = !git push origin $(git rev-parse --abbrev-ref HEAD)
   pf = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\" --force"
   co = checkout
   sla = log --oneline --decorate --graph --all
