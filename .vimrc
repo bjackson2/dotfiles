@@ -5,6 +5,7 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 " Plugins
 set nocompatible
 filetype off
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
