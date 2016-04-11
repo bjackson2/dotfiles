@@ -9,6 +9,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'ervandew/supertab'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tpope/vim-surround'
 Plugin 'thoughtbot/vim-rspec'
@@ -56,19 +57,6 @@ set expandtab
 set shiftround
 set list listchars=tab:»·,trail:·
 
-" Tab completion
-set wildmode=list:longest,list:full
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <S-Tab> <c-n>
-
 " Search
 set nohlsearch
 set incsearch
@@ -105,6 +93,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 let g:ctrlp_map = '<c-p>'
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
