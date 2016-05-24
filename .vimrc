@@ -10,8 +10,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'ervandew/supertab'
-Plugin 'Townk/vim-autoclose'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jpo/vim-railscasts-theme'
 
@@ -40,7 +40,7 @@ let g:rspec_command = "bin/rspec {spec}"
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
 map <leader>bd :bp\|bd #<cr>
-map <leader>ba :bufdo bd<cr>
+map <leader>ba :bufdo bd \| vs<cr>
 map <leader>/ /<C-R><C-W><cr>
 map <leader>i mmgg=G`m
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -71,6 +71,7 @@ if executable('ag')
 endif
 
 " Numbers
+set relativenumber
 set number
 set numberwidth=5
 
