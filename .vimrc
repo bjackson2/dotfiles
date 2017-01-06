@@ -42,7 +42,7 @@ let g:rspec_command = "bin/rspec {spec}"
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
 map <leader>bd :bp\|bd #<cr>
-map <leader>ba :bufdo bd \| vs<cr>
+map <leader>ba :bufdo bd<cr>
 map <leader>/ /<C-R><C-W><cr>
 map <leader>i mmgg=G`m
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -103,4 +103,4 @@ command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>\"
 
 " Grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap S :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
