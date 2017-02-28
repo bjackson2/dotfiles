@@ -12,6 +12,7 @@ call vundle#begin()
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'pangloss/vim-javascript'
@@ -37,7 +38,7 @@ set gfn=Monaco:h12
 
 " Leader commands
 let mapleader = "\<Space>"
-let g:rspec_command = "bin/rspec {spec}"
+let g:rspec_command = "spring rspec {spec}"
 
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
@@ -97,6 +98,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 let g:ctrlp_map = '<c-p>'
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
+command! -bang Q quit<bang>
 
 " Grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
