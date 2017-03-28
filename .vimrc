@@ -103,7 +103,7 @@ command! -bang Q quit<bang>
 
 " Grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>\"
+nnoremap \ :Ag<SPACE>\"\"<Left><Left>
 
 " Grep word under cursor
 nnoremap S :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
