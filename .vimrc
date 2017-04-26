@@ -29,6 +29,7 @@ set history=500
 set laststatus=2
 set autowrite
 set scrolloff=5
+set spell spelllang=en_us
 
 " Navigation
 runtime macros/matchit.vim
@@ -51,6 +52,8 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>gd :!open /Applications/GitHub\ Desktop.app<CR><CR>
+nmap <silent> <leader>c :set spell!<CR>
+nmap <silent> <leader>x :set nospell<CR>
 
 " Spacing
 set shiftwidth=2
