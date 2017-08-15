@@ -13,6 +13,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'pangloss/vim-javascript'
@@ -99,6 +100,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap J :bp <CR>
+nnoremap K :bn <CR>
 let g:ctrlp_map = '<c-p>'
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
