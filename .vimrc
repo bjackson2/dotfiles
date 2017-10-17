@@ -1,6 +1,4 @@
-" Filetypes
-au BufNewFile,BufRead *.es6 set filetype=javascript
-autocmd BufRead,BufNewFile *.md set filetype=markdown
+le *.md set filetype=markdown
 
 " Plugins
 set nocompatible
@@ -14,10 +12,14 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'bling/vim-bufferline'
 
 call vundle#end()
 filetype plugin indent on
@@ -88,6 +90,7 @@ colorscheme railscasts
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline
 set cursorline
+let g:airline_theme = "tomorrow"
 
 " Splits
 set splitbelow
@@ -100,7 +103,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-nnoremap J :bp <CR>
+nnoremap H :bp <CR>
 nnoremap K :bn <CR>
 let g:ctrlp_map = '<c-p>'
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
