@@ -17,9 +17,8 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'bling/vim-bufferline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'prettier/vim-prettier'
 
 call vundle#end()
 filetype plugin indent on
@@ -32,7 +31,15 @@ set history=500
 set laststatus=2
 set autowrite
 set scrolloff=5
-set spell spelllang=en_us
+
+" Set .eslintrc to format as JSON
+autocmd BufNewFile,BufRead .eslintrc   set syntax=json
+
+" Set start-up directory
+cd /Users/bjackson/Documents/ezcater/store
+
+" JSX formatting in .js files
+let g:jsx_ext_required = 0
 
 " Navigation
 runtime macros/matchit.vim
@@ -49,12 +56,14 @@ map <leader>so :source $MYVIMRC<cr>
 map <leader>bd :bp\|bd #<cr>
 map <leader>ba :bufdo bd<cr>
 map <leader>/ /<C-R><C-W><cr>
+map <leader>w <C-W><C-=>
 map <leader>i mmgg=G`m
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-map <Leader>gd :!open /Applications/GitHub\ Desktop.app<CR><CR>
+map <Leader>gh :!open /Applications/GitHub\ Desktop.app<CR><CR>
+map <Leader>gd :Gdiff<CR>
 nmap <silent> <leader>c :set spell!<CR>
 nmap <silent> <leader>x :set nospell<CR>
 
@@ -90,7 +99,6 @@ colorscheme railscasts
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline
 set cursorline
-let g:airline_theme = "tomorrow"
 
 " Splits
 set splitbelow
@@ -116,3 +124,8 @@ nnoremap \ :Ag<SPACE>\"\"<Left><Left>
 
 " Grep word under cursor
 nnoremap S :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
