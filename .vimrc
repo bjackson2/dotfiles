@@ -35,9 +35,6 @@ set scrolloff=5
 " Set .eslintrc to format as JSON
 autocmd BufNewFile,BufRead .eslintrc   set syntax=json
 
-" Set start-up directory
-cd /Users/bjackson/Documents/ezcater/store
-
 " JSX formatting in .js files
 let g:jsx_ext_required = 0
 

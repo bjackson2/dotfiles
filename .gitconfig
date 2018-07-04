@@ -21,6 +21,7 @@
   amp = !git add . && git commit --amend --no-edit && git push origin $(git rev-parse --abbrev-ref HEAD) --force
   gcpr = !git gc --aggressive && git prune
   rim = !git rebase -i master
+  mit = !git frm && git rim && git pf && git co master && git merge - && git p
 
 [grep]
   linenumber = true

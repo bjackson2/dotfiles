@@ -1,0 +1,38 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.renderIndentGuides": false,
+    "editor.lineNumbers": "relative",
+    "editor.parameterHints": false,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "window.title": "${activeEditorMedium}",
+    "workbench.colorTheme": "Neat",
+    "workbench.editor.enablePreview": false,
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        }
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false
+}
