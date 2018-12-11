@@ -96,6 +96,7 @@ colorscheme railscasts
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline
 set cursorline
+set cursorcolumn
 
 " Splits
 set splitbelow
