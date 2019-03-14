@@ -3,7 +3,6 @@
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": false,
   "editor.lineNumbers": "relative",
-  "editor.parameterHints": false,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "window.title": "${rootName} - ${activeEditorMedium}",
@@ -24,5 +23,6 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "files.autoSave": "onWindowChange"
+  "files.autoSave": "onWindowChange",
+  "editor.parameterHints.enabled": false
 }

@@ -18,7 +18,9 @@ Plugin 'jpo/vim-railscasts-theme'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'prettier/vim-prettier'
+Plugin 'pbrisbin/vim-colors-off'
 
 call vundle#end()
 filetype plugin indent on
@@ -31,6 +33,11 @@ set history=500
 set laststatus=2
 set autowrite
 set scrolloff=5
+
+" Change cursor in insert mode
+let &t_SI.="\e[6 q" "SI = INSERT mode
+let &t_SR.="\e[6 q" "SR = REPLACE mode
+let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
 
 " Set .eslintrc to format as JSON
 autocmd BufNewFile,BufRead .eslintrc   set syntax=json
@@ -92,7 +99,9 @@ set numberwidth=5
 
 " Colors and highlighting
 syntax on
+set background=dark
 colorscheme railscasts
+
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline
 set cursorline
@@ -111,6 +120,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap H :bp <CR>
 nnoremap K :bn <CR>
+noremap <C-c> :w !pbcopy<CR><CR>
+noremap <C-v> :r !pbpaste<CR><CR>
+
 let g:ctrlp_map = '<c-p>'
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
@@ -123,7 +135,23 @@ nnoremap \ :Ag<SPACE>\"\"<Left><Left>
 " Grep word under cursor
 nnoremap S :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+"" NERDTree
 
+" Open current file
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+
+" Toggle open/close
+map <C-n> :NERDTreeToggle<CR>
+
+let NERDTreeShowHidden=1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+"" Prettier
+
+" Auto-format on buffer save
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+set mouse=a
