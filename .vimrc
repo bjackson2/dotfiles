@@ -21,6 +21,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'prettier/vim-prettier'
 Plugin 'pbrisbin/vim-colors-off'
+Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 filetype plugin indent on
