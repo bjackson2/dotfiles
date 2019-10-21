@@ -23,6 +23,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'pbrisbin/vim-colors-off'
 Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jgdavey/tslime.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -35,6 +36,7 @@ set history=500
 set laststatus=2
 set autowrite
 set scrolloff=5
+set ttimeoutlen=50
 
 " Change cursor in insert mode
 let &t_SI.="\e[6 q" "SI = INSERT mode
@@ -55,7 +57,7 @@ set gfn=Monaco:h12
 
 " Leader commands
 let mapleader = "\<Space>"
-let g:rspec_command = "spring rspec {spec}"
+let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
 
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
@@ -63,6 +65,8 @@ map <leader>bd :bp\|bd #<cr>
 map <leader>ba :bufdo bd<cr>
 map <leader>/ /<C-R><C-W><cr>
 map <leader>w <C-W><C-=>
+nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 map <leader>i mmgg=G`m
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -155,6 +159,11 @@ let NERDTreeDirArrows = 1
 
 " Auto-format on buffer save
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.es6,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 set mouse=a
+
+"" Tmux integration
+let g:tslime_always_current_session = 1
+let g:tslime_always_current_window = 1
+
