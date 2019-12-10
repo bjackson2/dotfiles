@@ -3,7 +3,6 @@ le *.md set filetype=markdown
 " Plugins
 set nocompatible
 filetype off
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -21,22 +20,34 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'prettier/vim-prettier'
 Plugin 'pbrisbin/vim-colors-off'
-Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jgdavey/tslime.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
 
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
 " Basic Settings
 set encoding=utf-8
 set noswapfile
+set nobackup
+set nowritebackup
 set ruler
 set history=500
 set laststatus=2
 set autowrite
 set scrolloff=5
-set ttimeoutlen=50
+set timeoutlen=1000 ttimeoutlen=0
+
+" Status line
+let g:airline_theme='minimalist'
 
 " Change cursor in insert mode
 let &t_SI.="\e[6 q" "SI = INSERT mode
@@ -91,13 +102,6 @@ set incsearch
 set smartcase
 set ignorecase
 
-" Use silver searcher
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
-
 " Numbers
 set relativenumber
 set number
@@ -105,7 +109,6 @@ set numberwidth=5
 
 " Colors and highlighting
 syntax on
-set background=dark
 colorscheme railscasts
 
 au WinLeave * set nocursorline nocursorcolumn
@@ -129,8 +132,6 @@ nnoremap K :bn <CR>
 noremap <C-c> :w !pbcopy<CR><CR>
 noremap <C-v> :r !pbpaste<CR><CR>
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_show_hidden = 1
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
@@ -167,3 +168,26 @@ set mouse=a
 let g:tslime_always_current_session = 1
 let g:tslime_always_current_window = 1
 
+"" CoC config
+
+set hidden
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set signcolumn=yes
+
+let g:coc_node_path = '/Users/benjackson/.nodenv/versions/10.16.2/bin/node'
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json']
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+"" fzf
+nnoremap <C-p> :Files<cr>
+let g:fzf_files_options =
+  \ '--reverse ' .
+\ '--preview "(bat --theme="1337" --style=numbers --color always {}) 2> /dev/null | head -'.&lines.'"'
+let g:fzf_layout = { 'down': '~60%' }
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
