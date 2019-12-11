@@ -40,6 +40,7 @@ Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 " Basic Settings
@@ -144,10 +145,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
 
-" Grep shortcut
-command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>\"\"<Left><Left>
-
 " Grep word under cursor
 nnoremap S :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
@@ -190,9 +187,23 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 "" fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+
 nnoremap <C-p> :Files<cr>
+map <Leader>f :Ag<CR>
+map <Leader>q <C-a><C-q>
+
 let g:fzf_files_options =
   \ '--reverse ' .
 \ '--preview "(bat --theme="1337" --style=numbers --color always {}) 2> /dev/null | head -'.&lines.'"'
 let g:fzf_layout = { 'down': '~60%' }
-let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden'
+
+"" Adds preview to Ag
+command! -bang -nargs=? -complete=dir Ag
+\ call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+" Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+nnoremap K :Ack! '<C-r><C-w>'<cr>
+nmap \ :Ack!<space>
