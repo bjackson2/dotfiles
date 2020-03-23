@@ -41,6 +41,7 @@ Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " Basic Settings
@@ -77,7 +78,7 @@ set gfn=Monaco:h12
 
 " Leader commands
 let mapleader = "\<Space>"
-let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("docker/run spring rspec {spec}\n")'
 
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
@@ -145,9 +146,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>write<bang> <args>
 command! -bang Q quit<bang>
 
-" Grep word under cursor
-nnoremap S :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
 "" NERDTree
 
 " Open current file
@@ -205,5 +203,5 @@ command! -bang -nargs=? -complete=dir Ag
 " Ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-nnoremap K :Ack! '<C-r><C-w>'<cr>
-nmap \ :Ack!<space>
+nnoremap S :Ack! '<C-r><C-w>'<cr>
+nmap \ :Ack! -Q "
