@@ -6,10 +6,10 @@
   email = bjackson2@gmail.com
 
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
 
 [alias]
   p = !git push origin $(git rev-parse --abbrev-ref HEAD)
@@ -26,6 +26,10 @@
 
 [grep]
   linenumber = true
+
 [core]
   editor = /usr/bin/vim
   excludesfile = /Users/bjackson/.gitignore_global
+
+[pager]
+  branch = false

@@ -78,7 +78,7 @@ set gfn=Monaco:h12
 
 " Leader commands
 let mapleader = "\<Space>"
-let g:rspec_command = 'call Send_to_Tmux("docker/run spring rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("docker/run rspec {spec}\n")'
 
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
@@ -204,4 +204,4 @@ command! -bang -nargs=? -complete=dir Ag
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 nnoremap S :Ack! '<C-r><C-w>'<cr>
-nmap \ :Ack! -Q "
+nmap \ :Ack! -Q ""<Left>
