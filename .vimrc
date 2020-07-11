@@ -133,10 +133,6 @@ set splitright
 " Mappings
 nnoremap j gj
 nnoremap k gk
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
 nnoremap H :bp <CR>
 nnoremap K :bn <CR>
 noremap <C-c> :w !pbcopy<CR><CR>
