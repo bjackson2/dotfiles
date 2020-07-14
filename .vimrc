@@ -66,6 +66,8 @@ let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
 
 " Set .eslintrc to format as JSON
 autocmd BufNewFile,BufRead .eslintrc   set syntax=json
+au BufRead,BufNewFile *.tsx set filetype=typescriptreact
+au BufRead,BufNewFile *.jsx set filetype=javascriptreact
 
 " JSX formatting in .js files
 let g:jsx_ext_required = 0
