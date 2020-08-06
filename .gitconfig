@@ -28,7 +28,7 @@
   linenumber = true
 
 [core]
-  editor = /usr/local/bin/vim
+  editor = /usr/bin/vim
   excludesfile = /Users/bjackson/.gitignore_global
 
 [pager]
