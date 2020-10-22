@@ -132,6 +132,9 @@ set cursorcolumn
 set splitbelow
 set splitright
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
 " Mappings
 nnoremap j gj
 nnoremap k gk
