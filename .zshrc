@@ -13,6 +13,8 @@ ZSH_THEME="superjarin"
 export ZSH=/Users/benjackson/.oh-my-zsh
 JARIN_CURRENT_RUBY="%{$fg[white]%}[%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]%{$reset_color%}"
 
+alias vi="nvim"
+
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
@@ -22,3 +24,5 @@ source $ZSH/oh-my-zsh.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 # # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
