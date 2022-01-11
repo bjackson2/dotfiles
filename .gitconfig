@@ -17,12 +17,14 @@
   co = checkout
   sla = log --oneline --decorate --graph --all
   sl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-  frm = !git checkout master && git fetch origin -p && git rebase origin/master && git checkout -
+  frm = !git checkout $(git default-branch) && git fetch origin -p && git rebase origin/$(git default-branch) && git checkout -
   amp = !git add . && git commit --amend --no-edit && git push origin $(git rev-parse --abbrev-ref HEAD) --force
   gcpr = !git gc --aggressive && git prune
-  rim = !git rebase -i master
-  mit = !git frm && git rim && git pf && git co master && git merge - && git p
-  rc = !git diff --name-only --cached | xargs rubocop
+  rim = !git rebase -i $(git default-branch)
+mit = !git frm && git rim && git pf && git co $(git default-branch) && git merge - && git p
+rc = !$(git gd) | xargs rubocop
+  gd = !git diff --name-only --cached
+  default-branch = !bash -c '(git config --get branch.main.merge) &> /dev/null && echo "main" || echo "master"'
 
 [grep]
   linenumber = true

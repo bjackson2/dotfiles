@@ -80,7 +80,7 @@ set gfn=Monaco:h12
 
 " Leader commands
 let mapleader = "\<Space>"
-let g:rspec_command = 'call Send_to_Tmux("docker/run rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("docker/run bundle exec rspec {spec}\n")'
 
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>
@@ -97,6 +97,7 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 map <Leader>gh :!open /Applications/GitHub\ Desktop.app<CR><CR>
 map <Leader>gd :Gdiff<CR>
+map <leader>n :tabnew<CR>
 nmap <silent> <leader>c :set spell!<CR>
 nmap <silent> <leader>x :set nospell<CR>
 
