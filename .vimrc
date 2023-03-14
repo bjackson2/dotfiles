@@ -24,6 +24,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'slim-template/vim-slim.git'
 
 call vundle#end()
 filetype plugin indent on
@@ -57,7 +58,9 @@ set scrolloff=5
 set timeoutlen=1000 ttimeoutlen=0
 
 " Status line
-let g:airline_theme='minimalist'
+let g:airline_theme='base16'
+let g:airline#extensions#branch#enabled=0
+let g:airline#extensions#tabline#enabled = 1
 
 " Change cursor in insert mode
 let &t_SI.="\e[6 q" "SI = INSERT mode
@@ -68,6 +71,7 @@ let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
 autocmd BufNewFile,BufRead .eslintrc   set syntax=json
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact
 au BufRead,BufNewFile *.jsx set filetype=javascriptreact
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 
 " JSX formatting in .js files
 let g:jsx_ext_required = 0
@@ -80,7 +84,7 @@ set gfn=Monaco:h12
 
 " Leader commands
 let mapleader = "\<Space>"
-let g:rspec_command = 'call Send_to_Tmux("docker/run bundle exec rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("bundle exec rspec {spec}\n")'
 
 map <leader>vr :sp $MYVIMRC<cr>
 map <leader>so :source $MYVIMRC<cr>

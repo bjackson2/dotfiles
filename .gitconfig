@@ -22,7 +22,7 @@
   gcpr = !git gc --aggressive && git prune
   rim = !git rebase -i $(git default-branch)
 mit = !git frm && git rim && git pf && git co $(git default-branch) && git merge - && git p
-rc = !$(git gd) | xargs rubocop
+rc = !$(git gd) | sudo xargs rubocop
   gd = !git diff --name-only --cached
   default-branch = !bash -c '(git config --get branch.main.merge) &> /dev/null && echo "main" || echo "master"'
 
