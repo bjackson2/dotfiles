@@ -1,9 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-[ -x "$(command -v tmux)" ] \
-  && [ -z "${TMUX}" ] \
-  && (tmux attach || tmux) >/dev/null 2>&1
+#[ -x "$(command -v tmux)" ] \
+#  && [ -z "${TMUX}" ] \
+#  && (tmux attach || tmux) >/dev/null 2>&1
 
 export TERM="screen-256color"
 
@@ -29,4 +29,4 @@ autoload -Uz compinit && compinit
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:/usr/local/protobuf/bin:/opt/homebrew/opt/postgresql@13/bin:$PATH"
 
-export EDITOR=nvim
+export EDITOR=hx
