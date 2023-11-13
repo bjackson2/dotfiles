@@ -1,6 +1,3 @@
--- Requirements: install tsserver, eslint, solargraph language servers
--- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
