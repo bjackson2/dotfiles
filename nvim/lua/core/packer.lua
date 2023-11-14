@@ -36,4 +36,6 @@ return require('packer').startup(function(use)
   use 'vim-airline/vim-airline-themes'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
+  use 'vim-test/vim-test'
+  use 'jgdavey/tslime.vim'
 end)
