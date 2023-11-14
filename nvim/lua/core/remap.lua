@@ -31,3 +31,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 vim.keymap.set('n', '<C-n>', ":NvimTreeToggle<CR>")
+vim.keymap.set('n', '<leader>d', function()
+  if (vim.diagnostic.is_disabled()) then
+    vim.diagnostic.enable()
+  else
+    vim.diagnostic.disable()
+  end
+end)
