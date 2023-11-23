@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tslime.vim"] = {
+    loaded = true,
+    path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/tslime.vim",
+    url = "https://github.com/jgdavey/tslime.vim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/vim-airline",
@@ -164,6 +169,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
