@@ -13,7 +13,7 @@ ZSH_THEME="superjarin"
 export ZSH=/Users/benjackson/.oh-my-zsh
 JARIN_CURRENT_RUBY="%{$fg[white]%}[%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]%{$reset_color%}"
 
-alias vi="vim"
+alias vi="nvim"
 
 plugins=(git)
 
@@ -29,4 +29,4 @@ autoload -Uz compinit && compinit
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:/usr/local/protobuf/bin:/opt/homebrew/opt/postgresql@13/bin:$PATH"
 
-export EDITOR=hx
+export EDITOR=vi
