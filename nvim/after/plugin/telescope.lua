@@ -15,4 +15,6 @@ local dropdown_options = {
 vim.keymap.set('n', '<leader>pf', function() builtin.find_files(require('telescope.themes').get_dropdown(dropdown_options)) end, {})
 vim.keymap.set('n', '<C-p>', function() builtin.git_files(require('telescope.themes').get_dropdown(dropdown_options)) end, {})
 vim.keymap.set('n', '<leader>ps', function() builtin.live_grep(require('telescope.themes').get_dropdown(dropdown_options)) end, {})
+vim.keymap.set('n', '<leader>pa', function() require('telescope').extensions.live_grep_args.live_grep_args(require('telescope.themes').get_dropdown(dropdown_options)) end, {})
 vim.keymap.set('n', '<C-s>', function() builtin.grep_string(require('telescope.themes').get_dropdown(dropdown_options)) end, {})
+
