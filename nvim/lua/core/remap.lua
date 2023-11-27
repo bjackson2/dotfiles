@@ -11,7 +11,7 @@ vim.keymap.set("n", "k", "gk")
 -- Buffers, tabs
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "H", ":bp <CR>")
-vim.keymap.set("n", "K", ":bn <CR>")
+vim.keymap.set("n", "L", ":bn <CR>")
 vim.keymap.set("n", "<leader>bd", ":bp|bd #<cr>")
 vim.keymap.set("n", "<leader>ba", ":bufdo bd<cr>")
 vim.keymap.set("n", "<leader>w", "<C-W><C-=>")
