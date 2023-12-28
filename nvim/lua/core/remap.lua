@@ -19,7 +19,7 @@ vim.keymap.set("n", "<leader>n", ":tabnew<CR>")
 
 -- Text, cursor
 vim.keymap.set("n", "<leader>i", "mmgg=G`m")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", ":EslintFixAll<cr>")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
