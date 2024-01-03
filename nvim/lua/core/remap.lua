@@ -14,8 +14,11 @@ vim.keymap.set("n", "H", ":bp <CR>")
 vim.keymap.set("n", "L", ":bn <CR>")
 vim.keymap.set("n", "<leader>bd", ":bp|bd #<cr>")
 vim.keymap.set("n", "<leader>ba", ":bufdo bd<cr>")
-vim.keymap.set("n", "<leader>w", "<C-W><C-=>")
+vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>n", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>vs", ":vs<CR>")
+vim.keymap.set("n", "<leader>sp", ":sp<CR>")
+vim.keymap.set("n", "<leader>q", ":q<CR>")
 
 -- Text, cursor
 vim.keymap.set("n", "<leader>i", "mmgg=G`m")
