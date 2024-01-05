@@ -130,6 +130,11 @@ _G.packer_plugins = {
     path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["scratch.vim"] = {
+    loaded = true,
+    path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/scratch.vim",
+    url = "https://github.com/mtth/scratch.vim"
+  },
   ["telescope-live-grep-args.nvim"] = {
     loaded = true,
     path = "/Users/benjackson/.local/share/nvim/site/pack/packer/start/telescope-live-grep-args.nvim",

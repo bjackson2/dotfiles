@@ -44,4 +44,5 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'vim-test/vim-test'
   use 'jgdavey/tslime.vim'
+  use 'mtth/scratch.vim'
 end)
