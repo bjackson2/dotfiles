@@ -29,7 +29,7 @@ rc = !$(git gd) | sudo xargs rubocop
   linenumber = true
 
 [core]
-  editor = /usr/bin/vim
+  editor = nvim
   excludesfile = /Users/bjackson/.gitignore_global
 
 [pager]
