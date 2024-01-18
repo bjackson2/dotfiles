@@ -10,5 +10,8 @@ vim.keymap.set("n", "<leader>bs", ":sp<CR>", { desc = "Horizontally split buffer
 vim.keymap.set("n", "<leader>bq", ":q<CR>", { desc = "Quit current buffer" })
 
 -- Running tests
-vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", { silent = true })
-vim.keymap.set("n", "<leader>a", ":TestFile<CR>", { silent = true })
+vim.keymap.set("n", "<leader>t", ":TestNearest<CR>", { silent = true, desc = "Run current test" })
+vim.keymap.set("n", "<leader>a", ":TestFile<CR>", { silent = true, desc = "Run all tests in file" })
+
+-- Text
+vim.keymap.set("n", "<leader>z", "za", { desc = "Toggle fold at cursor" })
