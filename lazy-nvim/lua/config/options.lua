@@ -4,6 +4,7 @@
 
 vim.opt.cursorcolumn = true
 vim.opt.wrap = true
+vim.opt.undofile = false
 
 vim.api.nvim_create_autocmd("WinEnter", {
   pattern = "*",
