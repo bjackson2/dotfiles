@@ -21,6 +21,12 @@ vim.api.nvim_create_autocmd("WinLeave", {
   end,
 })
 
+-- Testing
 vim.g["test#strategy"] = "tslime"
 vim.g.tslime_always_current_session = 1
 vim.g.tslime_always_current_window = 1
+
+-- Scratch
+vim.g.scratch_filetype = "txt"
+vim.g.scratch_height = 20
+vim.g.scratch_persistence_file = "~/Documents/scratch.txt"
