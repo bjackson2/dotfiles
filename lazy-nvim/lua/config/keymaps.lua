@@ -15,6 +15,3 @@ vim.keymap.set("n", "<leader>a", ":TestFile<CR>", { silent = true, desc = "Run a
 
 -- Text
 vim.keymap.set("n", "<leader>z", "za", { desc = "Toggle fold at cursor" })
-
--- Scratch
-vim.keymap.set({ "n", "v" }, "<leader>bs", ":Scratch<CR>")

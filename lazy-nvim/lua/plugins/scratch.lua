@@ -1,3 +1,0 @@
-return {
-  { "mtth/scratch.vim" },
-}
