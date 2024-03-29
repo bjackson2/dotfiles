@@ -20,8 +20,3 @@ vim.api.nvim_create_autocmd("WinLeave", {
     vim.opt.cursorcolumn = false
   end,
 })
-
--- Testing
-vim.g["test#strategy"] = "tslime"
-vim.g.tslime_always_current_session = 1
-vim.g.tslime_always_current_window = 1
