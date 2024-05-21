@@ -6,11 +6,6 @@ vim.opt.cursorcolumn = true
 vim.opt.wrap = true
 vim.opt.undofile = false
 
--- Disable virtual_text since it's redundant due to lsp_lines.
-vim.diagnostic.config({
-  virtual_text = false,
-})
-
 vim.api.nvim_create_autocmd("WinEnter", {
   pattern = "*",
   callback = function(args)
