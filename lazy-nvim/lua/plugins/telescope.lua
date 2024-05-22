@@ -15,6 +15,7 @@ return {
               ["<S-Up>"] = actions.cycle_history_prev,
             },
           },
+          path_display = { "smart" },
         },
       }
     end,
