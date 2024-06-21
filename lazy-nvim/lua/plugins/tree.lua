@@ -10,6 +10,12 @@ return {
     opts = {
       filesystem = {
         follow_current_file = { enabled = false },
+        hide_dotfiles = false,
+        hide_gitignored = false,
+        hide_hidden = false,
+        hide_by_name = {
+          "node_modules",
+        },
       },
     },
   },
