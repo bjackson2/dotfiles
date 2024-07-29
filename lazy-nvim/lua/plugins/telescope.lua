@@ -15,7 +15,8 @@ return {
               ["<S-Up>"] = actions.cycle_history_prev,
             },
           },
-          path_display = { "smart" },
+          path_display = { "truncate" },
+          file_ignore_patterns = { "spec/vcr_cassettes" },
         },
       }
     end,
