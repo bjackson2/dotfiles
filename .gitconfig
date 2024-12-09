@@ -31,8 +31,11 @@ rc = !$(git gd) | sudo xargs rubocop
 [core]
   editor = nvim
   excludesfile = /Users/bjackson/.gitignore_global
+	compression = 0
 
 [pager]
   branch = false
 [init]
 	defaultBranch = main
+[http]
+	postBuffer = 157286400

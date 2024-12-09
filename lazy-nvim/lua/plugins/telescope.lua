@@ -17,6 +17,21 @@ return {
           },
           path_display = { "truncate" },
           file_ignore_patterns = { "spec/vcr_cassettes", "tmp", "node_modules", "vendor" },
+          vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden",
+          },
+        },
+        pickers = {
+          find_files = {
+            hidden = true,
+          },
         },
       }
     end,

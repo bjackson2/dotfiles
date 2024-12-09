@@ -6,7 +6,7 @@ return {
         "bash-language-server",
         "css-lsp",
         "eslint_d",
-        "ruby-lsp",
+        "solargraph",
         "typescript-language-server",
       })
     end,
