@@ -16,7 +16,7 @@ return {
             },
           },
           path_display = { "truncate" },
-          file_ignore_patterns = { "spec/vcr_cassettes", "tmp", "node_modules", "vendor" },
+          file_ignore_patterns = { "spec/vcr_cassettes", "tmp", "node_modules", "vendor", ".git" },
           vimgrep_arguments = {
             "rg",
             "--color=never",
