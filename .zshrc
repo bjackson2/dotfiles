@@ -14,6 +14,7 @@ export ZSH=/Users/benjackson/.oh-my-zsh
 JARIN_CURRENT_RUBY="%{$fg[white]%}[%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]%{$reset_color%}"
 
 alias vi="nvim"
+alias hs="ssh ben@benhp.gemcity.net"
 
 plugins=(git)
 
