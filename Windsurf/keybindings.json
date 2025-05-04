@@ -1,0 +1,71 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "shift+left",
+    "command": "workbench.action.previousEditorInGroup"
+  },
+  {
+    "key": "cmd+k alt+cmd+left",
+    "command": "-workbench.action.previousEditorInGroup"
+  },
+  {
+    "key": "shift+right",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+  {
+    "key": "cmd+k alt+cmd+right",
+    "command": "-workbench.action.nextEditorInGroup"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "workbench.action.splitEditorRight"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorRight"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+k cmd+\\",
+    "command": "-workbench.action.splitEditorDown"
+  },
+  {
+    "key": "cmd+l",
+    "command": "extension.runLineOnRspec",
+    "when": "editorLangId == 'ruby'"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-extension.runLineOnRspec",
+    "when": "editorLangId == 'ruby'"
+  },
+  {
+    "key": "cmd+t",
+    "command": "ruby-test-runner.run-current-test-file",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "-ruby-test-runner.run-current-test-file",
+    "when": "editorTextFocus"
+  }
+]
