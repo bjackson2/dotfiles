@@ -31,3 +31,6 @@ export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:/usr/local/protobuf/bin:/opt/homebrew/opt/postgresql@13/bin:$PATH"
 
 export EDITOR=vi
+
+# Added by Windsurf
+export PATH="/Users/benjackson/.codeium/windsurf/bin:$PATH"
