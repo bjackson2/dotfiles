@@ -67,5 +67,25 @@
     "key": "ctrl+shift+t",
     "command": "-ruby-test-runner.run-current-test-file",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "-workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
   }
 ]
