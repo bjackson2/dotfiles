@@ -1,40 +1,35 @@
 {
-    "workbench.colorTheme": "Rosé Pine",
-    "files.autoSave": "afterDelay",
-    "editor.wordWrap": "on",
-    "editor.minimap.enabled": false,
-    "editor.lineNumbers": "relative",
-    "editor.tabSize": 2,
-    "editor.formatOnSave": true,
-    "window.title": "${rootName}${separator}${activeEditorMedium}",
-    "vim.normalModeKeyBindings": [
-
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "j"
-            ],
-            "after": [
-                "g",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                "k"
-            ],
-            "after": [
-                "g",
-                "k"
-            ]
-        }
-    ],
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "workbench.editor.enablePreviewFromQuickOpen": true,
-    "vim.leader": " ",
-    "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "Rosé Pine",
+  "files.autoSave": "afterDelay",
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.lineNumbers": "relative",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "window.title": "${rootName}${separator}${activeEditorMedium}",
+  "vim.normalModeKeyBindings": [],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    }
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "vim.leader": " ",
+  "workbench.editor.enablePreview": false,
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "rubyLsp.formatter": "standard",
+  "rubyLsp.linters": [
+    "standard"
+  ]
 }
