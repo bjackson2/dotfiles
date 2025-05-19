@@ -16,6 +16,14 @@
     {
       "before": ["k"],
       "after": ["g", "k"]
+    },
+    {
+      "before": ["<leader>", "s", "w"],
+      "commands": ["macros.searchUnderCursor"]
+    },
+    {
+      "before": ["<leader>", "s", "g"],
+      "commands": ["workbench.action.findInFiles"]
     }
   ],
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -23,13 +31,18 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "workbench.editor.enablePreviewFromQuickOpen": true,
-  "vim.leader": " ",
+  "vim.leader": "<space>",
   "workbench.editor.enablePreview": false,
   "[ruby]": {
     "editor.defaultFormatter": "Shopify.ruby-lsp"
   },
   "rubyLsp.formatter": "standard",
-  "rubyLsp.linters": [
-    "standard"
-  ]
+  "rubyLsp.linters": ["standard"],
+  "macros.list": {
+    "searchUnderCursor": [
+      "editor.action.addSelectionToNextFindMatch",
+      "workbench.action.findInFiles",
+      "search.action.refreshSearchResults"
+    ]
+  }
 }

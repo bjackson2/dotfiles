@@ -87,5 +87,9 @@
     "key": "shift+cmd+[",
     "command": "-workbench.action.terminal.focusPrevious",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "macros.searchUnderCursor"
   }
 ]
