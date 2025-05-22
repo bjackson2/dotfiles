@@ -44,5 +44,8 @@
       "workbench.action.findInFiles",
       "search.action.refreshSearchResults"
     ]
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
