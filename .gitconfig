@@ -29,9 +29,9 @@ rc = !$(git gd) | sudo xargs rubocop
   linenumber = true
 
 [core]
-  editor = nvim
-	excludesfile = /Users/benjackson/Documents/dotfiles/.gitignore
-	compression = 0
+  editor = vi
+  excludesfile = /Users/benjackson/Documents/dotfiles/.gitignore
+  compression = 0
 
 [pager]
   branch = false
