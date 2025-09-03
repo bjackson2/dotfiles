@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "aki77.rails-db-schema",
+    "bung87.rails",
+    "christian-kohler.npm-intellisense",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "github.vscode-pull-request-github",
+    "ms-azuretools.vscode-containers",
+    "ms-azuretools.vscode-docker",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "mvllow.rose-pine",
+    "rebornix.ruby",
+    "redhat.vscode-yaml",
+    "shopify.ruby-lsp",
+    "sianglim.slim",
+    "sswg.swift-lang",
+    "vadimcn.vscode-lldb",
+    "vknabel.vscode-swiftformat",
+    "vscodevim.vim",
+    "wingrunr21.vscode-ruby"
+  ],
+  "unwantedRecommendations": []
+}

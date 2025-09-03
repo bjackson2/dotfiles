@@ -30,7 +30,7 @@ rc = !$(git gd) | sudo xargs rubocop
 
 [core]
   editor = vi
-  excludesfile = /Users/benjackson/Documents/dotfiles/.gitignore
+	excludesfile = /Users/ben/.gitignore_global
   compression = 0
 
 [pager]
