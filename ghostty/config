@@ -46,3 +46,4 @@ font-family = Menlo Regular
 keybind = ctrl+h=previous_tab
 keybind = ctrl+l=next_tab
 
+keybind = shift+enter=text:\x1b\r
