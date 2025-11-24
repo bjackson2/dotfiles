@@ -43,7 +43,8 @@
 # resize-overlay-duration = 4s 200ms
 
 font-family = Menlo Regular
-keybind = ctrl+h=previous_tab
-keybind = ctrl+l=next_tab
+
+keybind = ctrl+b>n=next_tab
+keybind = ctrl+b>p=previous_tab
 
 keybind = shift+enter=text:\x1b\r
