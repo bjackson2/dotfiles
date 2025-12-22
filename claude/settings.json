@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allowedTools": [
+      "Bash(gh:*)",
+      "Bash(git tag:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(ls:*)",
+      "Bash(./lint.sh:*)",
+      "Bash(cat:*)",
+      "Edit",
+      "Write",
+      "Read"
+    ]
+  }
+}

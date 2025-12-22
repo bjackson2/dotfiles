@@ -56,3 +56,7 @@ keybind = ctrl+b>.=resize_split:right,200
 keybind = ctrl+b>,=resize_split:left,200
 
 keybind = shift+enter=text:\x1b\r
+
+# Split visual settings
+split-divider-color = #666666
+unfocused-split-opacity = 0.85
