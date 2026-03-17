@@ -31,7 +31,7 @@ rc = !$(git gd) | sudo xargs rubocop
 
 [core]
   editor = vi
-	excludesfile = /Users/benjackson/.gitignore_global
+	excludesfile = /Users/ben/.gitignore_global
   compression = 0
 
 [pager]
