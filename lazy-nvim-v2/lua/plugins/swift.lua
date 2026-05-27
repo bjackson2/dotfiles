@@ -27,7 +27,19 @@ return {
           mason = false,
           cmd = { "xcrun", "sourcekit-lsp" },
           filetypes = { "swift", "objective-c", "objective-cpp" },
-          root_markers = { "buildServer.json", "Package.swift", ".git" },
+          -- Resolve root from the buffer's path so each git worktree gets its
+          -- own LSP client. Deliberately avoid `.git` as a marker: in worktrees
+          -- it's a gitlink file pointing back to the base worktree, which can
+          -- pull root_dir out of the current worktree and merge multiple
+          -- worktrees onto a single sourcekit-lsp instance.
+          root_dir = function(bufnr, on_dir)
+            local fname = vim.api.nvim_buf_get_name(bufnr)
+            local marker = vim.fs.find(
+              { "buildServer.json", "Package.swift" },
+              { path = fname, upward = true }
+            )[1]
+            on_dir(marker and vim.fs.dirname(marker) or vim.fs.dirname(fname))
+          end,
           capabilities = {
             workspace = {
               didChangeWatchedFiles = {
