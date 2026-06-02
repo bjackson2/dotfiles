@@ -17,11 +17,16 @@ return {
     opts = {
       filesystem = {
         follow_current_file = { enabled = false },
-        hide_dotfiles = false,
-        hide_gitignored = false,
-        hide_hidden = false,
-        hide_by_name = {
-          "node_modules",
+        filtered_items = {
+          visible = true, -- show hidden items (not dimmed) so EVERYTHING is always visible
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_ignored = false,
+          hide_hidden = false, -- Windows-only hidden attribute
+          hide_by_name = {},
+          hide_by_pattern = {},
+          never_show = {},
+          never_show_by_pattern = {},
         },
       },
     },
