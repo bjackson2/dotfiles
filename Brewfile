@@ -1,11 +1,13 @@
-tap "homebrew/bundle"
-
 brew "fzf"
 brew "gh"
 brew "mise"
 brew "neovim"
 brew "ripgrep"
+brew "starship"
 brew "tmux"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 
+cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
 cask "rectangle"

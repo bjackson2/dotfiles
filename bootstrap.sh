@@ -90,6 +90,7 @@ link_file() {
 
 create_directories() {
   info "Creating config directories..."
+  mkdir -p "$HOME/.config"
   mkdir -p "$HOME/.config/ghostty"
   success "Config directories ready"
 }
@@ -101,6 +102,7 @@ symlink_dotfiles() {
   link_file "$DOTFILES_DIR/.tmux.conf"     "$HOME/.tmux.conf"
   link_file "$DOTFILES_DIR/ghostty/config" "$HOME/.config/ghostty/config"
   link_file "$DOTFILES_DIR/lazy-nvim-v2"   "$HOME/.config/nvim"
+  link_file "$DOTFILES_DIR/starship/starship.toml" "$HOME/.config/starship.toml"
 }
 
 # ---------------------------------------------------------------------------

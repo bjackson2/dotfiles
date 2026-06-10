@@ -1,0 +1,56 @@
+# Starship prompt config. Two-line layout: context on top, prompt char below.
+# Docs: https://starship.rs/config/
+#
+# Module symbols use Nerd Font devicons (the font installed via the Brewfile),
+# written as \uXXXX escapes so the glyphs stay readable/diffable in source.
+
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$nodejs\
+$python\
+$ruby\
+$line_break\
+$character"""
+
+add_newline = true
+
+[username]
+show_always = false      # only render when relevant (SSH / root)
+format = "[$user]($style)@"
+style_user = "yellow bold"
+
+[hostname]
+ssh_only = true          # hide locally, show host when SSH'd in
+format = "[$hostname]($style) "
+style = "green bold"
+
+[directory]
+truncation_length = 5       # show up to 5 path components before truncating
+truncate_to_repo = false    # show the full path from ~, not just the repo root
+truncation_symbol = "\u2026/"    # prefix shown when the path is truncated
+style = "cyan bold"
+
+[git_branch]
+symbol = "\uf418 "          # Nerd Font branch glyph
+style = "purple bold"
+
+[git_status]
+style = "red bold"
+
+[character]
+success_symbol = "[\u276f](green bold)"
+error_symbol = "[\u276f](red bold)"
+
+[nodejs]
+symbol = "\ue718 "          # Nerd Font Node.js devicon
+
+[python]
+symbol = "\ue235 "          # Nerd Font Python devicon
+
+[ruby]
+symbol = "\ue791 "          # Nerd Font Ruby devicon
