@@ -122,6 +122,11 @@ install_tpm() {
   fi
 
   info "Installing tmux plugins..."
+  # install_plugins reads TMUX_PLUGIN_MANAGER_PATH and the @plugin list from the
+  # tmux server environment, which only exist once .tmux.conf has been sourced
+  # (the `run -b tpm` line sets them). Sourcing into a server first avoids the
+  # "unknown variable: TMUX_PLUGIN_MANAGER_PATH" FATAL when run cold.
+  tmux start-server \; source-file "$HOME/.tmux.conf"
   "$tpm_dir/bin/install_plugins"
   success "tmux plugins installed"
 }
