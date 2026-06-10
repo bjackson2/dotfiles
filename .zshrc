@@ -5,6 +5,12 @@ alias vi="nvim"
 alias g="git"
 alias hs="ssh ben@benhp.gemcity.net"
 
+# eza — a modern ls with icons (Nerd Font), colors, and git status.
+alias ls="eza --icons --group-directories-first"
+alias ll="eza -l --icons --git --group-directories-first"   # long view + git column
+alias la="eza -la --icons --git --group-directories-first"  # long + hidden files
+alias lt="eza --tree --level=2 --icons"                     # tree view, 2 levels deep
+
 export EDITOR="nvim"
 export TERM="screen-256color"
 

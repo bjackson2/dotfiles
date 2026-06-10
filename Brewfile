@@ -1,13 +1,14 @@
-brew "fzf"
-brew "gh"
-brew "mise"
-brew "neovim"
-brew "ripgrep"
-brew "starship"
-brew "tmux"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
+brew 'eza'
+brew 'fzf'
+brew 'gh'
+brew 'mise'
+brew 'neovim'
+brew 'ripgrep'
+brew 'starship'
+brew 'tmux'
+brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 
-cask "font-jetbrains-mono-nerd-font"
-cask "ghostty"
-cask "rectangle"
+cask 'font-jetbrains-mono-nerd-font'
+cask 'ghostty'
+cask 'rectangle'
