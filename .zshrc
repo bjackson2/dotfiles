@@ -1,36 +1,21 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#[ -x "$(command -v tmux)" ] \
-#  && [ -z "${TMUX}" ] \
-#  && (tmux attach || tmux) >/dev/null 2>&1
+alias vi="nvim"
+alias hs="ssh ben@benhp.gemcity.net"
 
+export EDITOR="nvim"
 export TERM="screen-256color"
 
 ulimit -n 4864
 
-ZSH_THEME="superjarin"
-export ZSH=/Users/benjackson/.oh-my-zsh
-JARIN_CURRENT_RUBY="%{$fg[white]%}[%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]%{$reset_color%}"
-
-alias vi="nvim"
-alias hs="ssh ben@benhp.gemcity.net"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-. $HOME/.asdf/asdf.sh
-
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-# # initialise completions with ZSH's compinit
+# Completion
 autoload -Uz compinit && compinit
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export GOPATH=$HOME/go
-export PATH="$GOPATH/bin:/usr/local/protobuf/bin:/opt/homebrew/opt/postgresql@13/bin:$PATH"
+# Activate mise if present. Resolved via PATH so it works whether installed by
+# Homebrew or the script; guarded so the shell doesn't error before it's installed.
+command -v mise >/dev/null && eval "$(mise activate zsh)"
 
-export EDITOR=vi
-
-# Added by Windsurf
-export PATH="/Users/benjackson/.codeium/windsurf/bin:$PATH"
+# Machine-specific overrides (PATH, work aliases, secrets). Not tracked in the
+# dotfiles repo — create this file per-machine.
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
