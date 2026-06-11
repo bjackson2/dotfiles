@@ -14,7 +14,7 @@
 [alias]
   p = !git push origin $(git rev-parse --abbrev-ref HEAD)
   pf = !git push origin $(git rev-parse --abbrev-ref HEAD) --force
-  fp = !git fetch origin -p && git pull
+	fp = pull --prune
   co = checkout
   sla = log --oneline --decorate --graph --all
   sl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
@@ -40,3 +40,5 @@ rc = !$(git gd) | sudo xargs rubocop
 	defaultBranch = main
 [http]
 	postBuffer = 157286400
+[remote "origin"]
+	fetch = +refs/heads/*:refs/remotes/origin/*
