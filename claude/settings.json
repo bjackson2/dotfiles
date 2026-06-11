@@ -13,7 +13,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10
           }
         ]
@@ -23,7 +23,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh clear",
+            "command": "$HOME/.claude/tmux-claude-status.sh clear",
             "timeout": 5,
             "async": true
           }
@@ -36,7 +36,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -47,7 +47,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh clear",
+            "command": "$HOME/.claude/tmux-claude-status.sh clear",
             "timeout": 5,
             "async": true
           }
@@ -60,7 +60,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -73,7 +73,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -84,7 +84,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh working",
+            "command": "$HOME/.claude/tmux-claude-status.sh working",
             "timeout": 5,
             "async": true
           }
@@ -97,7 +97,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -108,7 +108,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh done",
+            "command": "$HOME/.claude/tmux-claude-status.sh done",
             "timeout": 5,
             "async": true
           }
@@ -121,7 +121,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -132,7 +132,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh input",
+            "command": "$HOME/.claude/tmux-claude-status.sh input",
             "timeout": 5,
             "async": true
           }
@@ -145,7 +145,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -156,7 +156,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh input",
+            "command": "$HOME/.claude/tmux-claude-status.sh input",
             "timeout": 5,
             "async": true
           }
@@ -169,7 +169,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -182,7 +182,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "command": "$HOME/.claude/hooks/peon-ping/peon.sh",
             "timeout": 10,
             "async": true
           }
@@ -195,7 +195,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh working",
+            "command": "$HOME/.claude/tmux-claude-status.sh working",
             "timeout": 5,
             "async": true
           }

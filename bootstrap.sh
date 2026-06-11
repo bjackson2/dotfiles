@@ -104,6 +104,9 @@ symlink_dotfiles() {
   link_file "$DOTFILES_DIR/lazy-nvim-v2"   "$HOME/.config/nvim"
   link_file "$DOTFILES_DIR/starship/starship.toml" "$HOME/.config/starship.toml"
   link_file "$DOTFILES_DIR/claude/settings.json"   "$HOME/.claude/settings.json"
+  # settings.json references hook scripts via $HOME/.claude so it stays
+  # machine-agnostic; this link is what makes that path resolve.
+  link_file "$DOTFILES_DIR/claude/tmux-claude-status.sh" "$HOME/.claude/tmux-claude-status.sh"
 }
 
 # ---------------------------------------------------------------------------
