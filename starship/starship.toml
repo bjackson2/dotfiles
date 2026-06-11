@@ -5,8 +5,6 @@
 # written as \uXXXX escapes so the glyphs stay readable/diffable in source.
 
 format = """
-$username\
-$hostname\
 $directory\
 $git_branch\
 $git_state\
@@ -18,16 +16,6 @@ $line_break\
 $character"""
 
 add_newline = true
-
-[username]
-show_always = false      # only render when relevant (SSH / root)
-format = "[$user]($style)@"
-style_user = "yellow bold"
-
-[hostname]
-ssh_only = true          # hide locally, show host when SSH'd in
-format = "[$hostname]($style) "
-style = "green bold"
 
 [directory]
 truncation_length = 5       # show up to 5 path components before truncating
