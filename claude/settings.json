@@ -1,0 +1,274 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch"
+    ],
+    "defaultMode": "auto"
+  },
+  "model": "claude-fable-5[1m]",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh clear",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh clear",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh working",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh done",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      },
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh input",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh input",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/.claude/hooks/peon-ping/peon.sh",
+            "timeout": 10,
+            "async": true
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/ben/Documents/dotfiles/claude/tmux-claude-status.sh working",
+            "timeout": 5,
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "swift-lsp@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
+  },
+  "effortLevel": "xhigh",
+  "skipWorkflowUsageWarning": true,
+  "skipAutoPermissionPrompt": true,
+  "tool_approval": {
+    "auto_approve": [
+      "Read:*",
+      "Edit:*",
+      "MultiEdit:*",
+      "Write:*",
+      "NotebookEdit:*",
+      "Grep:*",
+      "Glob:*",
+      "LS:*",
+      "Task:*",
+      "TodoWrite:*",
+      "WebSearch:*",
+      "WebFetch:https:*",
+      "BashOutput:*",
+      "Bash:cat:*",
+      "Bash:head:*",
+      "Bash:tail:*",
+      "Bash:ls:*",
+      "Bash:find:*",
+      "Bash:grep:*",
+      "Bash:rg:*",
+      "Bash:echo:*",
+      "Bash:pwd:*",
+      "Bash:which:*",
+      "Bash:npm:*",
+      "Bash:yarn:*",
+      "Bash:pip:*",
+      "Bash:python:*",
+      "Bash:node:*",
+      "Bash:git:status",
+      "Bash:git:diff:*",
+      "Bash:git:log:*",
+      "Bash:git:branch:*",
+      "Bash:git:show:*",
+      "Bash:xcodebuild:*",
+      "Bash:swift:*",
+      "Bash:swiftc:*",
+      "Bash:cd:*",
+      "Bash:mkdir:*",
+      "Bash:touch:*",
+      "Bash:mv:*",
+      "Bash:cp:*"
+    ],
+    "require_approval": [
+      "Bash:rm:*",
+      "Bash:rmdir:*",
+      "Bash:git:push:*",
+      "Bash:git:reset:*",
+      "Bash:git:rebase:*",
+      "Bash:git:merge:*",
+      "Bash:git:checkout:-b:*",
+      "Bash:curl:*",
+      "Bash:wget:*",
+      "KillBash:*"
+    ]
+  },
+  "environment": {
+    "CLAUDE_AUTO_APPROVE_READS": "true",
+    "CLAUDE_AUTO_APPROVE_WRITES": "true"
+  }
+}

@@ -103,6 +103,7 @@ symlink_dotfiles() {
   link_file "$DOTFILES_DIR/ghostty/config" "$HOME/.config/ghostty/config"
   link_file "$DOTFILES_DIR/lazy-nvim-v2"   "$HOME/.config/nvim"
   link_file "$DOTFILES_DIR/starship/starship.toml" "$HOME/.config/starship.toml"
+  link_file "$DOTFILES_DIR/claude/settings.json"   "$HOME/.claude/settings.json"
 }
 
 # ---------------------------------------------------------------------------
