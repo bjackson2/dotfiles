@@ -42,3 +42,5 @@ rc = !$(git gd) | sudo xargs rubocop
 	postBuffer = 157286400
 [remote "origin"]
 	fetch = +refs/heads/*:refs/remotes/origin/*
+[push]
+	autoSetupRemote = true
