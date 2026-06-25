@@ -107,6 +107,9 @@ symlink_dotfiles() {
   # settings.json references hook scripts via $HOME/.claude so it stays
   # machine-agnostic; this link is what makes that path resolve.
   link_file "$DOTFILES_DIR/claude/tmux-claude-status.sh" "$HOME/.claude/tmux-claude-status.sh"
+  # .tmux.conf renders tab labels via #(~/.tmux/ssh-status.sh ...); without this
+  # link that command substitution fails and every tab title renders blank.
+  link_file "$DOTFILES_DIR/tmux-ssh-status.sh" "$HOME/.tmux/ssh-status.sh"
 }
 
 # ---------------------------------------------------------------------------

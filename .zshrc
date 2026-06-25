@@ -3,7 +3,6 @@ export PATH="$HOME/.local/bin:$PATH"
 
 alias vi="nvim"
 alias g="git"
-alias hs="ssh ben@benhp.gemcity.net"
 
 # eza — a modern ls with icons (Nerd Font), colors, and git status.
 alias ls="eza --icons --group-directories-first"
