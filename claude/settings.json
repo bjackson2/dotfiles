@@ -270,5 +270,6 @@
   "environment": {
     "CLAUDE_AUTO_APPROVE_READS": "true",
     "CLAUDE_AUTO_APPROVE_WRITES": "true"
-  }
+  },
+  "agentPushNotifEnabled": true
 }
