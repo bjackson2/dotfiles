@@ -4,6 +4,9 @@ export PATH="$HOME/.local/bin:$PATH"
 alias vi="nvim"
 alias g="git"
 
+# git worktree add, auto-prefixing the new branch with bjackson2/<basename>.
+gwt() { git worktree add -b "bjackson2/${1:t}" "$@"; }
+
 # eza — a modern ls with icons (Nerd Font), colors, and git status.
 alias ls="eza --icons --group-directories-first"
 alias ll="eza -l --icons --git --group-directories-first"   # long view + git column
